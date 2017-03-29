@@ -3,10 +3,7 @@ const useData = (data) => console.log(data)
 const curry = (f) => (a) => (b) => f(a, b)
 
 const slowRead = (name, callback) => {
-  setTimeout(() => {
-    console.log(`${name} done`)
-    callback(`data from ${name}`)
-  }, 1000)
+  callback(`data from ${name}`)
 }
 
 const curriedSlowRead = curry(slowRead)
@@ -38,3 +35,15 @@ readThreeThings((file, uri, thing) => {
   console.log(`uri returned: ${uri}`)
   console.log(`thing returned: ${thing}`)
 })
+
+const seq = (a, b) => (c) => {
+  let l, r
+  let aa = a((data) => l = data)
+  let bb = b(aa, (data) => r = data)
+}
+
+const doStuff = seq(
+  curriedSlowRead('url'),
+  get('link'),
+  curriedSlowRead
+)
