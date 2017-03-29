@@ -36,6 +36,17 @@
     </section>
 
     <section>
+      <h3>A note about syntax</h3>
+      <section>
+        <pre class="hljs js"><code data-content="code/es6.js"></code></pre>
+      </section>
+
+      <section>
+        <pre class="hljs js"><code data-content="code/es6-2.js"></code></pre>
+      </section>
+    </section>
+
+    <section>
       <h3>Partial application</h3>
       <section>
         <pre class="hljs js"><code data-content="code/partial_application.js"></code></pre>
@@ -59,6 +70,10 @@
 
     <section>
       <h3>Higher order functions</h3>
+      <section>
+        <pre class="hljs js"><code data-content="code/higher_order0.js"></code></pre>
+      </section>
+
       <section>
         <pre class="hljs js"><code data-content="code/higher_order.js"></code></pre>
       </section>
@@ -89,6 +104,14 @@
 
     <section>
       <h3>Composing higher order functions</h3>
+
+      <section>
+        <pre class="hljs js"><code data-content="code/compose_higher_order.js"></code></pre>
+      </section>
+
+      <section>
+        <pre class="hljs js"><code data-content="code/compose_higher_order2.js"></code></pre>
+      </section>
     </section>
 
     <section>
@@ -157,6 +180,8 @@ dependencies: [
   <script>
     $('[data-content]').each(function(i, tag) {
       $.ajax($(tag).data('content'), {success: function(code) {
+        code = code.replace(/[\s\S]*=start\n/m, '')
+        code = code.replace(/\n\/\/ =end[\s\S]*/m, '')
         $(tag).html(code);
       }, dataType: "text"});
     });

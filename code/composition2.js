@@ -10,3 +10,6 @@ const incThenDouble = pipe(
 
 incThenDouble(2)
 // => 6
+// =end
+
+console.assert(6 == incThenDouble(2))
