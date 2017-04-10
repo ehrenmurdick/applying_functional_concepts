@@ -1,4 +1,4 @@
-const alertButtonName = (buttonName) => () => alert(buttonName)
+const alertButtonName = buttonName => event => alert(buttonName)
 // =end
 
 const alert = console.log

@@ -1,8 +1,8 @@
-const addThree = (a, b, c) => a + b + c
-addThree(1, 2, 3)
+const add = (x, y) => x + y
+add(1, 2)
 
-const curriedAddThree = (a) => (b) => (c) => addThree(a, b, c)
-curriedAddThree(1)(2)(3)
+const curriedAdd = x => y => add(x, y)
+curriedAdd(1)(2)
 // =end
 
-console.assert(6 == curriedAddThree(1)(2)(3))
+console.assert(3 == curriedAdd(1)(2))

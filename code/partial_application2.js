@@ -1,9 +1,11 @@
-const addThree = (x, y) => (z) => x + y + z
+const add = (x, y) => x + y
 
-const partial = addThree(2, 4)
+const partialAdd = x => y => x + y
 
-partial(5)
-// => 11
+const increment = partialAdd(1)
+
+increment(5)
+// => 6
 // =end
 
-console.assert(11 == partial(5))
+console.assert(6 == increment(5))

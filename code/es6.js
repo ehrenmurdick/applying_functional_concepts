@@ -4,8 +4,9 @@ function foo(x) {
 }
 
 // es6
-const foo2 = (x) => {
+const foo2 = x => {
   return x * 2
 }
+
 // or
-const foo3 = (x) => x * 2
+const foo3 = x => x * 2

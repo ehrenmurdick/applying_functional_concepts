@@ -1,4 +1,4 @@
-const addThree = (x, y, z) => x + y + z
+const add = (x, y) => x + y
 // =end
 
-console.assert(6 == addThree(1, 2, 3))
+console.assert(6 == add(3, 3))

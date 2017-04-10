@@ -1,10 +1,10 @@
-const curry = (f) => (x) => (y) => f(x, y)
+const curry = f => x => y => f(x, y)
 
 const add = (x, y) => x + y
-const cadd = curry(add)
+const curriedAdd = curry(add)
 
-cadd(1)(2)
+curriedAdd(1)(2)
 // => 3
 // =end
 
-console.assert(3 == cadd(1)(2))
+console.assert(3 == curriedAdd(1)(2))
