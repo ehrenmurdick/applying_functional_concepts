@@ -1,15 +1,16 @@
-const pipe = (f, g) => (x) => g(f(x))
+const add = a => b => a + b
+const mul = a => b => a * b
 
-const add = (a) => (b) => a + b
-const mul = (a) => (b) => a * b
+// =start
+const pipe = (f, g) => x => g(f(x))
 
-const incThenDouble = pipe(
-  add(1),
-  mul(2)
+const doubleThenInc = pipe(
+  mul(2),
+  add(1)
 )
 
-incThenDouble(2)
-// => 6
+doubleThenInc(2)
+// => 5
 // =end
 
-console.assert(6 == incThenDouble(2))
+console.assert(5 == doubleThenInc(2))

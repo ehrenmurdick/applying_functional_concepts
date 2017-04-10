@@ -1,8 +1,8 @@
 // =start
-const compose = (f, g) => (x) => f(g(x))
+const compose = (f, g) => x => f(g(x))
 
-const add = (a) => (b) => a + b
-const mul = (a) => (b) => a * b
+const add = a => b => a + b
+const mul = a => b => a * b
 
 const doubleThenInc = compose(
   add(1),
