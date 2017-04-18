@@ -32,11 +32,23 @@
     </section>
 
     <section>
-      <h1>Applying<br/>Functional<br/>Concepts</h1>
+      <h1 style="text-transform: lowercase; font-size:10em;">&Lambda;</h1>
+      <aside class="notes">
+        <ul>
+          <li>testing is way better</li>
+          <li>not hard</li>
+          <li>all the code works - there are tests</li>
+          <li>interactive</li>
+        </ul>
+        <b>es6 syntax next</b>
+      </aside>
     </section>
 
     <section>
-      <h3>A note about syntax</h3>
+      <h3>Preface: es6</h3>
+      <aside class="notes">
+        <b>closures next</b>
+      </aside>
       <section>
         <pre class="hljs js"><code data-content="code/es6.js"></code></pre>
       </section>
@@ -48,8 +60,36 @@
 
     <section>
       <h3>Closures</h3>
+      <aside class="notes">
+        <b>pure functions next</b>
+      </aside>
       <section>
         <pre class="hljs js"><code data-content="code/closures2.js"></code></pre>
+      </section>
+    </section>
+
+    <section>
+      <h3>Pure vs Impure</h3>
+      <section>
+        These functions are pure
+        <pre class="hljs js"><code data-content="code/pure.js"></code></pre>
+      </section>
+
+      <section>
+        This function is <em>not</em> pure
+        <pre class="hljs js"><code data-content="code/pure2.js"></code></pre>
+      </section>
+
+      <section>
+        <pre class="hljs js"><code data-content="code/pure2.05.js"></code></pre>
+      </section>
+
+      <section>
+        These functions are <em>not</em> pure
+        <pre class="hljs js"><code data-content="code/pure2.1.js"></code></pre>
+        <aside class="notes">
+          <b>partial application next</b>
+        </aside>
       </section>
     </section>
 
@@ -57,11 +97,17 @@
       <h3>Partial application</h3>
       <section>
         <pre class="hljs js"><code data-content="code/partial_application2.js"></code></pre>
+        <aside class="notes">
+          <ul>
+            <li>brought to you by... currying! (next)</li>
+          </ul>
+          <b>currying next</b>
+        </aside>
       </section>
-      <section>
-        <pre class="hljs js"><code data-content="code/partial_application3.js"></code></pre>
-        <pre class="hljs html"><code data-content="code/partial_application3.html"></code></pre>
-      </section>
+      <!-- <section> -->
+      <!--   <pre class="hljs js"><code data&#45;content="code/partial_application3.js"></code></pre> -->
+      <!--   <!&#45;&#45; <pre class="hljs html"><code data&#38;#45;content="code/partial_application3.html"></code></pre> &#45;&#45;> -->
+      <!-- </section> -->
     </section>
 
     <section>
@@ -69,10 +115,26 @@
 
       <section>
         <pre class="hljs js"><code data-content="code/currying.js"></code></pre>
+        <aside class="notes">
+          to curry a function, is to...
+          (define verb)
+        </aside>
       </section>
 
       <section>
         <pre class="hljs js"><code data-content="code/currying2.js"></code></pre>
+        <aside class="notes">
+          back track for a second
+          <b>pure* functions next</b>
+        </aside>
+      </section>
+
+      <section>
+        Pure* Functions
+        <pre class="hljs js"><code data-content="code/pure3.js"></code></pre>
+        <aside class="notes">
+          <b>composing next</b>
+        </aside>
       </section>
     </section>
 
@@ -80,12 +142,16 @@
       <h3>Composing</h3>
       <section>
         <pre class="hljs js"><code data-content="code/composing.js"></code></pre>
+        <aside class="notes">
+          <b>higher order funcions next</b>
+        </aside>
       </section>
     </section>
 
     <section>
-      <h3>Higher order functions</h3>
+      <h3>Higher Order Functions</h3>
       <section>
+        ...and &lambda;s
         <pre class="hljs js"><code data-content="code/higher_order0.js"></code></pre>
       </section>
 
@@ -110,18 +176,6 @@
 
       <section>
         <pre class="hljs js"><code data-content="code/composition3.js"></code></pre>
-      </section>
-    </section>
-
-    <section>
-      <h3>Composing higher order functions</h3>
-
-      <section>
-        <pre class="hljs js"><code data-content="code/compose_higher_order.js"></code></pre>
-      </section>
-
-      <section>
-        <pre class="hljs js"><code data-content="code/compose_higher_order2.js"></code></pre>
       </section>
     </section>
 
